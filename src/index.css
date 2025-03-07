@@ -4,14 +4,6 @@
 
 @media (max-width: 640px) {
 
-    .text-lg {
-        font-size: 1rem;
-    }
-
-  .gap-2 {
-    margin-left: -20px;
-  }  
-
   .task-manager {
     padding: 1rem;
   }
@@ -62,4 +54,16 @@
   .task-manager .task .subtasks .subtask button {
     padding: 0.25rem;
   }
+}
+
+@media (max-width: 420px) {
+
+.text-lg {
+    font-size: 0.8rem !important;
+}
+
+.gap-2 {
+margin-left: -20px;
+}  
+
 }

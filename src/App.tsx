@@ -35,7 +35,7 @@ function App() {
     return [];
   });
   const [newTaskTitle, setNewTaskTitle] = useState('');
-  const [newSubtaskTitle, setNewSubtaskTitle] = useState('');
+  const [newSubtaskTitles, setNewSubtaskTitles] = useState<{ [key: string]: string }>({});
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [showNewTaskModal, setShowNewTaskModal] = useState(false);
   const [isRecurring, setIsRecurring] = useState(false);
@@ -86,11 +86,11 @@ function App() {
 
   const addSubtask = (taskId: string, e: React.FormEvent) => {
     e.preventDefault();
-    if (!newSubtaskTitle.trim()) return;
+    if (!newSubtaskTitles[taskId]?.trim()) return;
 
     const newSubtask: SubTask = {
       id: crypto.randomUUID(),
-      title: newSubtaskTitle,
+      title: newSubtaskTitles[taskId],
       completed: false,
     };
 
@@ -99,7 +99,7 @@ function App() {
         ? { ...task, subtasks: [...task.subtasks, newSubtask] }
         : task
     ));
-    setNewSubtaskTitle('');
+    setNewSubtaskTitles(prev => ({ ...prev, [taskId]: '' }));
   };
 
   const toggleSubtask = (taskId: string, subtaskId: string) => {
@@ -388,8 +388,8 @@ function App() {
                         <form onSubmit={(e) => addSubtask(task.id, e)} className="flex gap-2">
                           <input
                             type="text"
-                            value={newSubtaskTitle}
-                            onChange={(e) => setNewSubtaskTitle(e.target.value)}
+                            value={newSubtaskTitles[task.id] || ''}
+                            onChange={(e) => setNewSubtaskTitles(prev => ({ ...prev, [task.id]: e.target.value }))}
                             placeholder="Добавить подзадачу"
                             maxLength={20}
                             className="flex-1 px-3 py-1 text-sm bg-gray-700 border border-gray-600 rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
