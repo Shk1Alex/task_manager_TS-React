@@ -59,10 +59,10 @@
 @media (max-width: 420px) {
 
 .text-lg {
-    font-size: 0.8rem !important;
+    font-size: 1rem !important;
 }
 
-.gap-2 {
+.forms {
 margin-left: -20px;
 }  
 
