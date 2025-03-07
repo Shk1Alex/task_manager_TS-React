@@ -245,6 +245,7 @@ function App() {
                     value={newTaskTitle}
                     onChange={(e) => setNewTaskTitle(e.target.value)}
                     placeholder="Название задачи"
+                    maxLength={20}
                     className="w-full px-4 py-2 mb-4 bg-gray-700 border border-gray-600 rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   />
                   <div className="flex items-center gap-2 mb-4">
@@ -289,6 +290,7 @@ function App() {
                   value={newTaskTitle}
                   onChange={(e) => setNewTaskTitle(e.target.value)}
                   placeholder="Введите название задачи"
+                  maxLength={20}
                   className="flex-1 px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 />
                 <button
@@ -342,7 +344,7 @@ function App() {
                         </p>
                       )}
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 actions">
                       <button
                         onClick={() => deleteTask(task.id)}
                         className="p-2 text-red-400 hover:bg-red-900/30 rounded-lg transition-colors"
@@ -389,6 +391,7 @@ function App() {
                             value={newSubtaskTitle}
                             onChange={(e) => setNewSubtaskTitle(e.target.value)}
                             placeholder="Добавить подзадачу"
+                            maxLength={20}
                             className="flex-1 px-3 py-1 text-sm bg-gray-700 border border-gray-600 rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                           />
                           <button

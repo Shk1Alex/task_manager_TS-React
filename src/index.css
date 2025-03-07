@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (max-width: 640px) {
+
+    .text-lg {
+        font-size: 1rem;
+    }
+
+  .gap-2 {
+    margin-left: -20px;
+  }  
+
+  .task-manager {
+    padding: 1rem;
+  }
+
+  .task-manager h1 {
+    font-size: 1.5rem;
+  }
+
+  .task-manager .tabs button {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .task-manager .task {
+    padding: 1rem;
+  }
+
+  .task-manager .task h3 {
+    font-size: 1rem;
+  }
+
+  .task-manager .task p {
+    font-size: 0.875rem;
+  }
+
+  .task-manager .task .actions {
+    display: flex;
+    gap: 0.25rem;
+    justify-content: flex-end;
+  }
+
+  .task-manager .task .actions button {
+    padding: 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  .task-manager .task .subtasks form input {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .task-manager .task .subtasks .subtask {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .task-manager .task .subtasks .subtask button {
+    padding: 0.25rem;
+  }
+}
