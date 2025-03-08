@@ -295,9 +295,9 @@ function App() {
                 />
                 <button
                   type="submit"
-                  className="px-6 py-2 bg-teal-500 text-gray-100 rounded-lg hover:bg-teal-600 transition-colors"
+                  className="p-2 bg-teal-500 text-gray-100 rounded-lg hover:bg-teal-600 transition-colors"
                 >
-                  Добавить
+                  <Plus className="w-5 h-5" />
                 </button>
               </div>
             </form>
