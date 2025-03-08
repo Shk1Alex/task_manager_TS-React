@@ -284,7 +284,7 @@ function App() {
           {/* Add Task Form */}
           {activeTab === 'active' && (
             <form onSubmit={addTask} className="mb-6">
-              <div className="flex gap-2">
+              <div className="flex gap-2 forms">
                 <input
                   type="text"
                   value={newTaskTitle}

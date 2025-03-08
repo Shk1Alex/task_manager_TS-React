@@ -67,3 +67,14 @@
     font-size: 12px !important;
   }  
 }
+
+@media (max-width: 360px) {
+
+  .tabs {
+    font-size: 10px !important;
+  }  
+
+  .forms {
+    margin-left: -10px;
+  }
+}
