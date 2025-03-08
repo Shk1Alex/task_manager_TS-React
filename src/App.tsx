@@ -203,7 +203,7 @@ function App() {
           </h1>
 
           {/* Tabs */}
-          <div className="flex mb-6 border-b border-gray-700">
+          <div className="flex mb-6 border-b border-gray-700 tabs">
             <button
               className={`px-4 py-2 font-medium ${
                 activeTab === 'active'
@@ -273,7 +273,7 @@ function App() {
                       type="submit"
                       className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600"
                     >
-                      Добавить
+                      +
                     </button>
                   </div>
                 </form>
@@ -284,7 +284,7 @@ function App() {
           {/* Add Task Form */}
           {activeTab === 'active' && (
             <form onSubmit={addTask} className="mb-6">
-              <div className="flex gap-2 forms">
+              <div className="flex gap-2">
                 <input
                   type="text"
                   value={newTaskTitle}
@@ -295,9 +295,9 @@ function App() {
                 />
                 <button
                   type="submit"
-                  className="p-2 bg-teal-500 text-gray-100 rounded-lg hover:bg-teal-600 transition-colors"
+                  className="px-4 py-2 bg-teal-500 text-gray-100 rounded-lg hover:bg-teal-600 transition-colors"
                 >
-                  <Plus className="w-5 h-5" />
+                  +
                 </button>
               </div>
             </form>
